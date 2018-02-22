@@ -100,18 +100,96 @@ public class ProcesadorRomano {
     }
 
     public static boolean ordenDescendiente(String texto) {
-        char actual;
-        char siguiente;
+        int actual;
+        int siguiente;
+        char valorActual;
+        char valorSiguiente;
 
         if (texto.length() >= 2) {
             for (int i = 0; i < texto.length(); i++) {
-                actual = texto.charAt(i);
+
+                valorActual = texto.charAt(i);
+                switch (valorActual) {
+                    case 'I':
+                        actual = 1;
+                        break;
+
+                    case 'V':
+                        actual = 5;
+                        break;
+
+                    case 'X':
+                        actual = 10;
+                        break;
+
+                    case 'L':
+                        actual = 50;
+                        break;
+
+                    case 'C':
+                        actual = 100;
+                        break;
+
+                    case 'D':
+                        actual = 500;
+                        break;
+
+                    case 'M':
+                        actual = 1000;
+                        break;
+
+                    default:
+                        actual = 0;
+                        break;
+                }
+
+
+
+
+
+                ////
+//                actual = texto.charAt(i);
                 if ((i + 1) == texto.length()) {
                     return true;
                 }
-                siguiente = texto.charAt(i+1);
+//                siguiente = texto.charAt(i+1);
 
-                if (actual > siguiente) {
+                valorSiguiente = texto.charAt(i+1);
+                switch (valorSiguiente) {
+                    case 'I':
+                        siguiente = 1;
+                        break;
+
+                    case 'V':
+                        siguiente = 5;
+                        break;
+
+                    case 'X':
+                        siguiente = 10;
+                        break;
+
+                    case 'L':
+                        siguiente = 50;
+                        break;
+
+                    case 'C':
+                        siguiente = 100;
+                        break;
+
+                    case 'D':
+                        siguiente = 500;
+                        break;
+
+                    case 'M':
+                        siguiente = 1000;
+                        break;
+
+                    default:
+                        siguiente = 0;
+                        break;
+                }
+
+                if (actual < siguiente) {
                     return false;
                 }
             }
