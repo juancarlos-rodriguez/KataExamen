@@ -24,6 +24,7 @@ public class ProcesadorRomanoTests {
         Assert.assertEquals(100, instance.convierte("C"));
         Assert.assertEquals(500, instance.convierte("D"));
         Assert.assertEquals(1000, instance.convierte("M"));
+        Assert.assertEquals(0, instance.convierte("T"));
 
 
 

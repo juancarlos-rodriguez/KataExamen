@@ -5,17 +5,15 @@ public class ProcesadorRomano {
     public static int convierte(String texto) {
 
         int resultado = 0;
+        char valor;
 
         if (texto.equals("")) {
             return 0;
         }
 
-        char valor;
-
         for (int i = 0; i < texto.length(); i++) {
 
             valor = texto.charAt(i);
-
             switch (valor) {
                 case 'I':
                     resultado += 1;
@@ -45,7 +43,9 @@ public class ProcesadorRomano {
                     resultado += 1000;
                     break;
 
-
+                default:
+                    resultado = 0;
+                    break;
             }
         }
 
