@@ -89,4 +89,10 @@ public class ProcesadorRomano {
         }
         return true;
     }
+
+    public static boolean ordenDescendiente(String texto) {
+
+        return false;
+
+    }
 }
