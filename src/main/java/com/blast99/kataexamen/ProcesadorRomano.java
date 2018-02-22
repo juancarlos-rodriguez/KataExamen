@@ -2,7 +2,7 @@ package com.blast99.kataexamen;
 
 public class ProcesadorRomano {
 
-    public static int convierte(String texto) {
+    public int convierte(String texto) {
 
         int resultado = 0;
         char valor;
@@ -51,5 +51,10 @@ public class ProcesadorRomano {
 
         return resultado;
 
+    }
+
+    public static boolean cantidadAceptableChar(String texto) {
+
+        return false;
     }
 }
