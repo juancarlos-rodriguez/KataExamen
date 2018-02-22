@@ -53,8 +53,40 @@ public class ProcesadorRomano {
 
     }
 
-    public static boolean cantidadAceptableChar(String texto) {
+    public boolean cantidadAceptableChar(String texto) {
 
-        return false;
+        int cantidadI = 0, cantidadL = 0, cantidadD = 0, cantidadX = 0, cantidadC = 0;
+        char c;
+
+        for (int i = 0; i < texto.length(); i++) {
+            c = texto.charAt(i);
+            switch (c) {
+                case 'I':
+                    cantidadI++;
+                    break;
+
+                case 'X':
+                    cantidadX++;
+                    break;
+
+                case 'L':
+                    cantidadL++;
+                    break;
+
+                case 'C':
+                    cantidadC++;
+                    break;
+
+                case 'D':
+                    cantidadD++;
+                    break;
+
+            }
+
+            if (cantidadI > 3 || cantidadL > 1 || cantidadD > 1 || cantidadX > 3 || cantidadC > 3) {
+                return false;
+            }
+        }
+        return true;
     }
 }
