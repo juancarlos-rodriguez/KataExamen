@@ -15,6 +15,16 @@ public class ProcesadorRomanoTests {
         ProcesadorRomano instance = new ProcesadorRomano();
 
         Assert.assertEquals(0, instance.convierte(""));
+        Assert.assertEquals(1, instance.convierte("I"));
+        Assert.assertEquals(2, instance.convierte("II"));
+        Assert.assertEquals(3, instance.convierte("III"));
+        Assert.assertEquals(4, instance.convierte("V"));
+        Assert.assertEquals(10, instance.convierte("X"));
+        Assert.assertEquals(50, instance.convierte("L"));
+        Assert.assertEquals(100, instance.convierte("C"));
+        Assert.assertEquals(500, instance.convierte("D"));
+        Assert.assertEquals(1000, instance.convierte("M"));
+
 
 
     }
