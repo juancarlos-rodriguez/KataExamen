@@ -10,5 +10,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class ProcesadorRomanoTests {
 
+    @Test
+    public void testConvierte() {
+        ProcesadorRomano instance = new ProcesadorRomano();
+
+    }
 
 }
