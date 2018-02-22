@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ProcesadorRomanoTests {
 
     @Test
-    public void testConvierte() {
+    public void testConvierte() throws Exception {
         ProcesadorRomano instance = new ProcesadorRomano();
 
         Assert.assertEquals(0, instance.convierte(""));
@@ -45,7 +45,8 @@ public class ProcesadorRomanoTests {
         Assert.assertTrue(instance.ordenDescendiente(""));
 
 
-
+        Assert.assertEquals(60, instance.convierte("LX"));
+        Assert.assertEquals(16, instance.convierte("XVI"));
 
 
 

@@ -2,7 +2,7 @@ package com.blast99.kataexamen;
 
 public class ProcesadorRomano {
 
-    public int convierte(String texto) {
+    public int convierte(String texto) throws Exception {
 
         int resultado = 0;
         char valor;
@@ -10,6 +10,15 @@ public class ProcesadorRomano {
         if (texto.equals("")) {
             return 0;
         }
+
+        if (!cantidadAceptableChar(texto)) {
+            throw new Exception("El texto no tiene la cantidad aceptable de caracteres");
+        }
+
+        if (!ordenDescendiente(texto)) {
+            throw new Exception("El texto no se encuentra de forma descendente");
+        }
+
 
         for (int i = 0; i < texto.length(); i++) {
 
