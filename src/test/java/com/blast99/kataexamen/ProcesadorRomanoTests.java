@@ -14,6 +14,9 @@ public class ProcesadorRomanoTests {
     public void testConvierte() {
         ProcesadorRomano instance = new ProcesadorRomano();
 
+        Assert.assertEquals(0, instance.convierte(""));
+
+
     }
 
 }
