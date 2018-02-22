@@ -39,6 +39,9 @@ public class ProcesadorRomanoTests {
         Assert.assertFalse(instance.cantidadAceptableChar("CCCC"));
 
 
+        Assert.assertFalse(instance.ordenDescendiente("XXL"));
+
+
 
 
 
