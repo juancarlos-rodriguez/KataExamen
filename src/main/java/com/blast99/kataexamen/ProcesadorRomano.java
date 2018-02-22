@@ -91,8 +91,24 @@ public class ProcesadorRomano {
     }
 
     public static boolean ordenDescendiente(String texto) {
+        char actual;
+        char siguiente;
 
-        return false;
+        if (texto.length() >= 2) {
+            for (int i = 0; i < texto.length(); i++) {
+                actual = texto.charAt(i);
+                if ((i + 1) == texto.length()) {
+                    return true;
+                }
+                siguiente = texto.charAt(i+1);
+
+                if (actual > siguiente) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
 
     }
 }

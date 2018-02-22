@@ -40,6 +40,10 @@ public class ProcesadorRomanoTests {
 
 
         Assert.assertFalse(instance.ordenDescendiente("XXL"));
+        Assert.assertTrue(instance.ordenDescendiente("LXX"));
+        Assert.assertTrue(instance.ordenDescendiente("X"));
+        Assert.assertTrue(instance.ordenDescendiente(""));
+
 
 
 
