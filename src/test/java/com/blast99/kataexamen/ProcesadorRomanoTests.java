@@ -27,6 +27,11 @@ public class ProcesadorRomanoTests {
         Assert.assertEquals(0, instance.convierte("T"));
 
 
+        Assert.assertFalse(instance.cantidadAceptableChar("XXXX"));
+
+
+
+
 
     }
 
